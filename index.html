@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- <link rel="icon" type="image/png" href="assets/l.avif"> -->
+     <link rel="icon" typre="image/png" href="assets/Logo.avif">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Muhammad Awais</a>
+            <ul class="navlink" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-image">
+            <img src="assets/profile.jpg" alt="Muhammad Awais">
+        </div>
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Muhammad Awais</span></h1>
+            <h2 id="typedText"></h2>
+            <p>I build responsive and modern websites using HTML, CSS, and JavaScript.</p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="assets/Awais-CV.pdf" class="btn secondary" download>Download Resume</a>
+            </div>
+        </div>
+
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I am Muhammad Awais, a Computer Science student with a passion for web development and technology. I
+            enjoy learning new skills and turning ideas into simple, functional, and user-friendly websites.
+            I am always looking for opportunities to improve my knowledge, explore new technologies, and work on
+            projects that help me grow as a developer. I like solving problems through code and creating websites
+            that
+            are clean, responsive, and easy to use.
+            As I continue my journey in Computer Science, I am excited to build more projects, gain real-world
+            experience, and keep learning every day. My goal is to become a skilled full-stack developer and create
+            web
+            applications that make a positive impact.
+        </p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill" data-percent="95">
+            <p>JavaScript</p>
+
+            <div class="skill-row">
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+                <span class="percent"></span>
+            </div>
+        </div>
+        <div class="skill" data-percent="70">
+            <p>HTML</p>
+
+            <div class="skill-row">
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+                <span class="percent"></span>
+            </div>
+        </div>
+        <div class="skill" data-percent="85">
+            <p>CSS</p>
+
+            <div class="skill-row">
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+                <span class="percent"></span>
+            </div>
+        </div>
+        <div class="skill" data-percent="90">
+            <p>AI</p>
+            <div class="skill-row">
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+                <span class="percent"></span>
+            </div>
+        </div>
+        <div class="skill" data-percent="75">
+            <p>React</p>
+            <div class="skill-row">
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+                <span class="percent"></span>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="filter-buttons">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="html">HTML/CSS</button>
+            <button data-filter="js">JavaScript</button>
+            <button data-filter="ts">TypeScript</button>
+            <button data-filter="react">React</button>
+        </div>
+        <div class="project-card" data-tags="html,css,js">
+            <div class="project-image">
+                <img src="assets/play.webp" alt="">
+            </div>
+            <div class="project-info">
+                <h3>Spotify Music Player Clone</h3>
+                <p> A responsive web-based music player inspired by Spotify. Users can browse playlists, play/pause
+                    songs, skip tracks, adjust volume, and view the currently playing song. The application provides a
+                    modern and user-friendly interface for streaming local audio files.</p>
+                <div class="buttons">
+                    <button>Coming Soon</button>
+                </div>
+            </div>
+            <div class="project-tech">
+                <h3>Technologies</h3>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+            </div>
+
+        </div>
+        <div class="project-card" data-tags="html,css,react,ts">
+            <div class="project-image">
+                <img src="assets/task management.webp" alt="">
+            </div>
+            <div class="project-info">
+                <h3>Task Management System</h3>
+                <p>A task management application that allows users to create, update, delete, and organize daily tasks.
+                    Features include task priorities, due dates, status tracking, and filtering to improve productivity
+                    and workflow management.</p>
+
+                <div class="buttons">
+                    <button>Coming Soon</button>
+                </div>
+            </div>
+            <div class="project-tech">
+                <h3>Technologies</h3>
+                <span>React.js</span>
+                <span>TypeScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+
+        </div>
+        <div class="project-card" data-tags="html,react,css">
+            <div class="project-image">
+                <img src="assets/e-commerce.webp" alt="">
+            </div>
+            <div class="project-info">
+                <h3>E-Commerce Shopping Website</h3>
+                <p>A full-stack e-commerce platform where users can browse products, search by category, add items to a
+                    shopping cart, and place orders. It includes user authentication, product management, and a
+                    responsive interface for desktop and mobile devices.</p>
+                <div class="buttons">
+                    <button>Coming Soon</button>
+                </div>
+            </div>
+
+            <div class="project-tech">
+                <h3>Technologies</h3>
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>Tailwind CSS</span>
+                <span>GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+            <p id="successMessage"></p>
+        </form>
+
+    </section>
+    <section>
+        <footer class="footer">
+            <h3>Muhammad Awais</h3>
+            <p>Thank you for visiting my portfolio. Feel free to connect with me through social media or email.</p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/Muhammad-Awais628?tab=repositories" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/mawaissiddiqui/" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </div>
+            <hr>
+            <p class="copyright"> © 2026 Muhammad Awais. All Rights Reserved.</p>
+        </footer>
+    </section>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
