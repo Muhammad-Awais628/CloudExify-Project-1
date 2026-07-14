@@ -5,42 +5,45 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-// Close menu after clicking a link
 navLinks.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
     });
 });
-const phrases = ["Web Developer", "CloudExify Intern", "Problem Solver"];
 
+const phrases = ["Web Developer", "CloudExify Intern", "Problem Solver"];
 let pIndex = 0;
 let charIndex = 0;
+let isDeleting = false;
+
 const typedEl = document.getElementById("typedText");
 
 function typeLoop() {
     const current = phrases[pIndex];
+    if (!isDeleting) {
+        typedEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
 
-    typedEl.textContent += current.charAt(charIndex);
-    charIndex++;
-
-    if (charIndex === current.length) {
-        pIndex++;
-        charIndex = 0;
-
-        if (pIndex === phrases.length) {
+        if (charIndex === current.length) {
+            isDeleting = true;
+            setTimeout(typeLoop, 1500);
             return;
         }
-
-        typedEl.innerHTML += " | ";
-        setTimeout(typeLoop, 500);
-        return;
+        setTimeout(typeLoop, 100);
+    } else {
+        typedEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+            isDeleting = false;
+            pIndex = (pIndex + 1) % phrases.length;
+            setTimeout(typeLoop, 300);
+            return;
+        }
+        setTimeout(typeLoop, 50);
     }
-
-    setTimeout(typeLoop, 70);
 }
 
 typeLoop();
-
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
