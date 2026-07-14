@@ -96,7 +96,8 @@ form.addEventListener("submit", function (e) {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    if (name === "" || email === "" || message === "") {
+    const emailOK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (name === "" || !emailOK || message === "") {
         successMessage.textContent = "Please fill in all fields.";
         return;
     }
